@@ -24,6 +24,12 @@
      background-image: linear-gradient(to right, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1)); 
      color: #FFFFFF;
 }
+.common-header{
+    font-size: 3rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 40px;
+}
 /* nav style started */
 header{
     background-color: #1A0B2E;
@@ -225,7 +231,54 @@ hr{
     margin-bottom: 16px;
 }
 
-
+/* Featured Episode start */
+#featured-epsiodes{
+    background-color: #1A0B2E;
+    padding-top: 120px;
+}
+.featured-container{
+    color: #FFFFFF;
+}
+.episode-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.episode-card{
+     text-align: center;
+      /* background-color: #250D44; */
+}
+.episode-card-content{
+   background-color: #250D44;
+   /* border: 2px solid red; */
+   margin-bottom: 120px;
+   height: 200px;
+   border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.clock-timer{
+    display: flex; 
+    gap: 6px; 
+    margin-left: 40px;
+    /* border: 2px solid red; */
+    /* align-items: center; */
+}
+.clock-timer img{
+    width: 20px;
+    height: 20px;
+}
+iframe{
+    border-radius: 10px;
+   
+}
+.episode-card h3{
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+.episode-card p{
+    margin-bottom: 12px;
+}
 
 /* media query */
 @media screen and (max-width:576px){
@@ -312,5 +365,22 @@ hr{
         padding-top: 40px;
         grid-column: span 5;
         
+    }
+
+    /* episode part */
+    .episode-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .episode-card-content{
+        background-color: #250D44;
+        /* border: 2px solid red; */
+        /* margin-bottom: 120px; */
+        height: 200px;
+        
+    }   
+    iframe{
+        width:300px;
+        height: 200px;
     }
 }
