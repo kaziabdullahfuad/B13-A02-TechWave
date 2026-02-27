@@ -17,7 +17,7 @@
 .container{
     width: 75%;
     margin: auto;
-    /* border: 2px solid blue; */
+    border: 2px solid blue;
     /* max-width: 1200px; */
 }
 .btn{
@@ -79,72 +79,75 @@ nav .nav-button{
 }
 
 /* hero part start */
-#banner{
+#banner {
     background-image: url("../assets/hero-bg.png");
-    background-size: contain;
-    background-position: center;
-    padding: 101px;
     background-color: #1A0B2E;
-    
+    background-size: cover; /* Changed to cover so lines hit the edges */
+    background-position: center;
+    padding: 100px 20px; /* Reduced side padding for safety */
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
 }
-.banner-container{
-    /* border: 2px solid blue; */
-     position: relative;
+
+.banner-container {
     max-width: 550px;
-    margin: 0 auto;
     text-align: center;
-    background: url("../assets/hero-circle.png");
-    background-repeat: no-repeat;
-    background-position: top;
     display: flex;
     flex-direction: column;
     align-items: center;
+     border: 2px solid blue;
+}
+
+/* The Circle Wrapper */
+.icon-wrapper {
+    border: 2px solid green;
+    position: relative;
+    width: 180px; 
+    height: 180px;
+    background: url("../assets/hero-circle.png") no-repeat center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding-top: 69px;
+    margin-bottom: 40px; /* Replaced the huge 121px margin */
 }
-.banner-container img{
-    margin: auto auto;
-    max-width: 200px;
-    margin-bottom: 121px;
+
+.mic-icon {
+    max-width: 80px; /* Size the mic relative to the circle */
 }
-.banner-container h1{
-    font-size: 3.75rem;
-    color: #FFFFFF;
-    margin-bottom: 8px;
-}
-.banner-container p{
-    color: #FFFFFF;
-    font-size: 16px;
-    margin-bottom: 24px;
-}
+
+/* The NEW Badge */
 .badge {
     position: absolute;
-    top: 20px;
-    right: 140px;
-    background: #00FFC2; 
+    top: 10px;
+    right: 10px;
+    background: #00FFC2; /* Bright green from image */
     color: #000;
+    font-size: 10px;
     font-weight: bold;
     padding: 4px 10px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 255, 194, 0.6);
 }
-.spotify-btn{
-    padding: 12px 21px;
-    border-radius: 10000px;
-    margin-right: 8px;
-}
-.email-btn{
-    padding: 12px 20px;
-    border-radius: 10000px;
-    background-color: transparent;
-    color: #00FF88;
-    border: 1px solid #00FF88;
+
+.banner-container h1 {
+    font-size: clamp(2.5rem, 8vw, 3.75rem); /* Scales automatically! */
+    color: #FFFFFF;
+    margin-bottom: 8px;
 }
 
-/* media query */
-@media screen and (max-width:576px){
+.banner-container p {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
 
-   #navbar{
+/* Responsive Fixes (Mobile) */
+@media screen and (max-width: 576px) {
+
+     #navbar{
         width: 100%;
         border: none;
         justify-content: space-around;
@@ -161,42 +164,24 @@ nav .nav-button{
         display: none;
     }
 
-    #banner{
-         background-image: url("../assets/hero-bg.png");
-         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        padding: 20px;
-        background-color: #1A0B2E;
-        /* border: 2px solid red; */
+    #banner {
+        padding: 60px 15px;
+        background-size: 150% auto; /* Zooms the lines slightly on mobile */
+    }
+    
+    .icon-wrapper {
+        width: 140px;
+        height: 140px;
     }
 
-    .banner-container{
-    /* border: 2px solid blue; */
-        /* max-width: 550px; */
-        /* width: 100%; */
-        /* width: 300px; */
-        max-width: 300px;
-        /* border: 2px solid blue; */
-        
-        /* margin: 0 auto; */
-        text-align: center;
-        background: url("../assets/hero-circle.png");
-        background-repeat: no-repeat;
-        background-position: top;
-        /* background-size: 300px 300px; */
-        background-size: min(300px, 100%);
+    .mic-icon {
+        max-width: 60px;
+    }
+
+    .button-group {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 69px;
-    }
-    .banner-container img{
-        max-width: 80px;
-    }
-
-    .badge{
-        right: 50px
+        gap: 15px;
+        width: 100%;
     }
 }
