@@ -362,7 +362,10 @@ footer{
     text-align: center;
     margin: 0 auto 32px;
 }
-
+.footer-card{
+    display: flex;
+    gap: 10px;
+}
 /* media query */
 @media screen and (max-width:576px){
 
