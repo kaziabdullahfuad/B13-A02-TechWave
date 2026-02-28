@@ -23,6 +23,12 @@
 .btn{
      background-image: linear-gradient(to right, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1)); 
      color: #FFFFFF;
+     transition: transform 0.5s ease;
+     cursor: pointer;
+}
+.btn:hover {
+    
+    transform: rotate(90deg);
 }
 .common-header{
     font-size: 3rem;
